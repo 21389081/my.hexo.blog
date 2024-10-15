@@ -5,7 +5,7 @@ keywords: null
 author: Vincent Chen
 language: zh-TW
 timezone: ''
-url: https://21389081.github.io/
+url: https://21389081.github.io
 permalink: ':year/:month/:day/:title/'
 permalink_defaults: null
 pretty_urls:
@@ -67,4 +67,4 @@ search:
   path: search.xml
   field: post
   content: true
-
+root: /

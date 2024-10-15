@@ -28,4 +28,4 @@ threads就是一個很好的例子，作為一個幾乎擁有絕對言論自由�
 這樣看來，社群媒體也不是什麼多優秀的發明嘛。
 
 ![img](https://i.ytimg.com/vi/tfAGuj-5B4E/maxresdefault.jpg)
-![img](maxresdefault.jpg)
+![img](/maxresdefault.jpg)
