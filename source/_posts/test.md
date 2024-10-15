@@ -26,3 +26,6 @@ threads就是一個很好的例子，作為一個幾乎擁有絕對言論自由�
 畢竟我們知道，真理越辯越明的世界並沒有發生，那些戰場，真的只是打來打去而已，完全沒有意義。
 
 這樣看來，社群媒體也不是什麼多優秀的發明嘛。
+
+![img](https://i.ytimg.com/vi/tfAGuj-5B4E/maxresdefault.jpg)
+![img](maxresdefault.jpg)
