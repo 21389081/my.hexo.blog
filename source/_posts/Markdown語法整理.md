@@ -10,8 +10,7 @@ copyright_author: Vincent
 copyright_author_href: https://21389081.github.io/index.html
 copyright_info: 此文章版權歸 VincentChen 所有，如有轉載，請註明來自原作者
 ---
-# **markdown語法**
----
+此文整理了個人在撰寫文章時，常用的markdown語法，希望能夠提供對使用hexo架設網站，或是使用markdown製作筆記的人一些幫助。
 
 ## 標題
 ```markdown

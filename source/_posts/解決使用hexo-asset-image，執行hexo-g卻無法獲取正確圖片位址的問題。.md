@@ -11,7 +11,7 @@ tags:
   -  問題解決
 cover: https://summer10920.github.io/assets/images/khVSx9I.png
 ---
-# 前言
+
 相信很多架設hexo部落格的新手們，都曾經碰到這種狀況，在跟著各大教學資源使用hexo-asset-image後，執行hexo g卻無法獲取正確圖片位址，總是會輸出錯誤圖片位址，無法正確顯示圖片，所以我整理了幾種方法，希望能夠提供一點幫助，讓新手們不要重蹈覆轍(笑)。
 
 # 問題概況
