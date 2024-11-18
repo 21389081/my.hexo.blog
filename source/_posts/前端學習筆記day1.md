@@ -1,7 +1,10 @@
 ---
 layout: posts
-title: 前端學習筆記
-date: 2024-11-07 15:37:17
+title: 前端學習筆記day1
+copyright_author: Vincent
+copyright_author_href: https://21389081.github.io/index.html
+copyright_info: 此文章版權歸 VincentChen 所有，如有轉載，請註明來自原作者
+date: 2024-11-18 16:12:41
 cover: https://www.oxfordwebstudio.com/user/pages/06.da-li-znate/sta-je-html/sta-je-html.jpg
 tags:
   -  Html
@@ -9,7 +12,6 @@ tags:
   -  筆記
 ---
 整理我在自學前端的課程內容、筆記，以及一些實作的內容，不僅方便複習，也順道可以練習markdown語法的使用，期許可以幫助到更多的人。
-
 # HTML概述
 
 - HTML:超文本標記語言，是一種標誌性的語言，非編程語言，不能使用邏輯運算。通過標籤將網路上的文檔格式進行統一，使分散網路資源連結為一個邏輯整體。
@@ -389,7 +391,6 @@ h1,h2,h3,h4,h5,h6,p,dt
 ```
 
 - javascript定義
-
 ```html
 <script language="javarscript" type="text/javascript">
   // 腳本代碼...
@@ -397,7 +398,6 @@ h1,h2,h3,h4,h5,h6,p,dt
 ```
 
 - css定義
-
 ```html
 <style type="text/css">
   /* 樣式設置 */
@@ -406,7 +406,6 @@ h1,h2,h3,h4,h5,h6,p,dt
 為了保證各瀏覽器的兼容性，在寫css時請帶上計量單位。
 
 - 不要在註釋中使用"--"
-
 ```html
 <!-- 不要在註釋內容中使用(--) -->
 ```
