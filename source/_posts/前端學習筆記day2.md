@@ -103,3 +103,28 @@ HTML除了基本的佈局標籤以外，還有部分標籤具有強大的交互�
     </tr>
 </table>
 ```
+### td跨行/跨列屬性
+主要用來繪製複雜表格。
+- **rowspan**:跨行
+- **colspan**:跨列
+
+```html
+    <!-- emmet語法 -->
+    <!-- table[border=1][width=500][align=center] -->
+    <!-- tr*3>td{內容區$$}*3 -->
+    <table border="1" width="500" align="center">
+    <tr>
+        <!-- valign:垂直對齊(top/middle/bottom) -->
+        <td rowspan="2" align="center" valign="middle">內容區01</td>
+        <td>內容區02</td>
+        <td rowspan="3">內容區03</td>
+    </tr>
+    <tr>
+        <td>內容區02</td>
+    </tr>
+    <tr align="center">
+        <td>內容區01</td>
+        <td>內容區02</td>
+    </tr>
+</table>
+```
