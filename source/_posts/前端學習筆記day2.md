@@ -174,3 +174,45 @@ HTML除了基本的佈局標籤以外，還有部分標籤具有強大的交互�
     </tfoot>
 </table>
 ```
+## form表單標籤
+是所有標籤中最核心的標籤之一，它是用來實現前後端交互的一個重要標籤。
+
+**常用屬性**
+- **name** :表單名稱
+- **method** :前端提交數據到後端的方法(主要有:get/post，默認的是get。)
+- **action** :表單數據提交的地方(通常是一個後台文件名(.jsp/.php/.aspx/.py等)，或網址)，如果是#，表示提交到當前文件下。
+
+### 表單元素
+#### input類
+> input類主要用於輸入、選擇或發出指令。
+**type: text,password,radio,checkbox,file,button,image,submit,reset**
+
+##### text
+單行文本輸入框，type="text"可以不寫，默認值。
+  - 屬性:
+    - **placeholder** :提示
+    - **name** :命名
+    - **minlength和maxlength** :最少/多輸入的字符個數
+    - **readonly** :只讀
+    - **disabled** :禁用
+    - **value** :預設值
+    - **pattern** :正則表達式
+- password:密碼輸入框，屬性和text類一樣。
+- radio:單選按鈕，通常是兩項以上。
+  - 屬性:
+    - **name** :命名(必須要有)
+    - **value** :預設值
+    - **checked** :選中
+    - **disabled** :禁用
+    - **readonly** :只讀
+- checkbox:複選框，可以用來選擇0項、1項或多項，屬性同上。
+- file:文件上傳按鈕，屬性同上。
+- button:普通按鈕，通常用來調用腳本程式碼。
+  - 屬性:
+    - **value** :按鈕的標題
+    - **disabled** :禁用
+- image:圖片按鈕，用法與button一樣，有一個特殊屬性:src(用來加載提示圖片，用它替換了value屬性)。
+  > 它有提交功能，和summit功能一樣。
+- submit:提交按鈕，用來將表單數據提交到後端，常用屬性同button。
+- reset:重置按鈕，將表單所有組件輸入的內容全部清空，還原為初始狀態，常用屬性同button。
+
