@@ -17,7 +17,7 @@ HTML除了基本的佈局標籤以外，還有部分標籤具有強大的交互�
 - 標籤由標簽名、標籤屬性和文本內容三部分組成(注意:單標籤沒有文本內容)。
 - 標籤屬性是對標籤的一種描述方式。
 - 標籤屬性分為:通用、自有和自定義屬性。
-- 通用屬性:所有標籤都具有的屬性。
+- 通用屬性:所有標籤都具有的屬性(除 \<br/> 標籤外)。
   - 通用屬性有:
     - id:用來給標籤取一個唯一的名稱，在一個網頁中必須是唯一。
     - class:用來給標籤取一個類名。
@@ -62,7 +62,7 @@ HTML除了基本的佈局標籤以外，還有部分標籤具有強大的交互�
 
 ## 表格標籤
 ### table表格
-在Html中 **\<table>** 標籤表示一個表格，每個表格均有若干行(由 **\<tr>** 標籤定義)，每行被分割為若干單元格(由 **\<td>** 標籤定義)，主要用於呈現格式化數據。
+在Html中 **\<table>** 標籤表示一個表格，每個表格均有若干行(由 **\<tr>** 標籤定義)，每行被分割為若干單元格(由 **\<td>** 標籤定義)，主要用於呈現格式化數據，撰寫時必須為先行後列，列在行包裹之下。
 - 表格屬性
   - **border**:設置表格邊框，默認單位是像素。
   - **width**:設置表格寬度，默認單位是像素。
@@ -129,11 +129,12 @@ HTML除了基本的佈局標籤以外，還有部分標籤具有強大的交互�
 </table>
 ```
 ### table完整表格
-一個完整table表格，一般包含 **\<thead>** 、 **\<tbody>** 和 **\<tfoot>** 元素結合，用來規定表格的各個部分(表頭、主體、表尾)。
+一個完整table表格，一般包含 **\<caption>** 、 **\<thead>** 、 **\<tbody>** 和 **\<tfoot>** 元素結合，用來規定表格的各個部分(表頭、主體、表尾)。
 
-- **\<thead>** 標籤用於組合HTML表格的表頭內容。
-- **\<tbody>** 標籤用於組合HTML表格的主體內容。
-- **\<tfoot>** 標籤用於組合HTML表格的表尾內容。
+- **\<caption>:** 表格標題(非必要)。
+- **\<thead>:** 標籤用於組合HTML表格的表頭內容。
+- **\<tbody>:** 標籤用於組合HTML表格的主體內容。
+- **\<tfoot>:** 標籤用於組合HTML表格的表尾內容。
 
 ```html
 <!-- table[border=1 width=600 align=center]>(caption{})+(thead>tr>th*4)+(tbody>tr*3>td*4)+(tfoot>tr>td[colspan=4]) -->
@@ -183,12 +184,12 @@ HTML除了基本的佈局標籤以外，還有部分標籤具有強大的交互�
 - **action** :表單數據提交的地方(通常是一個後台文件名(.jsp/.php/.aspx/.py等)，或網址)，如果是#，表示提交到當前文件下。
 
 ### 表單元素
-#### input類
+#### input
 > input類主要用於輸入、選擇或發出指令。
 **type: text,password,radio,checkbox,file,button,image,submit,reset**
 
-##### text
-單行文本輸入框，type="text"可以不寫，默認值。
+- text
+單行文本輸入框(enter換行不適用)，type="text"可以不寫，默認值。
   - 屬性:
     - **placeholder** :提示
     - **name** :命名
@@ -212,7 +213,88 @@ HTML除了基本的佈局標籤以外，還有部分標籤具有強大的交互�
     - **value** :按鈕的標題
     - **disabled** :禁用
 - image:圖片按鈕，用法與button一樣，有一個特殊屬性:src(用來加載提示圖片，用它替換了value屬性)。
-  > 它有提交功能，和summit功能一樣。
+  > 它有提交功能，和submit功能一樣。
 - submit:提交按鈕，用來將表單數據提交到後端，常用屬性同button。
 - reset:重置按鈕，將表單所有組件輸入的內容全部清空，還原為初始狀態，常用屬性同button。
 
+#### textarea
+文本域(也可以叫多行文本框)，主要用於輸入大批量的文本內容。
+  - 屬性:
+    - **name** :命名
+    - **placeholder** :提示
+    - **rows** :行數
+    - **cols** :列數
+    - **readonly** :只讀
+    - **disabled** :禁用
+    - **required** :必填
+    - **minlength和maxlength** :最少/多輸入的字符個數
+    - **value** :可獲取其文本內容
+
+#### select
+下拉選單，默認用於選擇單一項目，用option標籤呈現每個選項。
+  - 屬性:
+    - **name** :命名
+    - **multiple** :表示可以多選，這時的下拉列表框變成了列表框。
+    - **required** :必填
+    - **size** :顯示的行數
+**範例:**
+```html
+    <!-- label中for的內容要和select的id相同，才能產生關聯。 -->
+    <!-- form是塊級元素，select、input是行級元素 -->
+    <form action="">
+        <label for="sex">性別:</label>
+        <select name="" id="sex">
+            <option value="male">男</option>
+            <option value="female">女</option>
+        </select>
+        <br/>
+
+        <label for="course" >選課:</label>
+        <!-- multiple是多選 -->
+        <!-- size是顯示的選項數量 -->
+        <select name="" id="course" multiple="multiple" size="2">
+            <option value="國文">國文</option>
+            <option value="英文">英文</option>
+            <option value="數學">數學</option>
+            <option value="自然">自然</option>
+        </select>
+    </form>
+```
+
+#### button
+普通按鈕，具有提交功能，可以單獨使用，不寫在form元素中。若寫在form中，則有提交功能，功能與input中的submit一樣。
+```html
+    <!-- 這裡的button主要用來調用js程式碼 -->
+    <button id="btnOk">確認</button>
+    <form action="test.aspx">
+        <input type="text" name="info">
+        <!-- 這裡的button的功能與input中的submit一樣 -->
+        <button>提交</button>
+    </form>
+```
+### iframe框架標籤
+框架集，是用來將多個網頁文件組合成一個文件。
+- 常用屬性:
+  - **name** :框架名
+  - **src** :引入的外部html文件
+  - **scrolling** :滾動條(yes/no/auto)
+  - **width** :寬度(%/px)
+  - **height** :高度(%/px)
+  - **frameborder** :是否有邊框(1/0)
+  - **marginwidth** :框架離左右的距離(%/px)
+  - **marginheight** :框架離頂部和底端的距離(%/px)
+
+**範例:**
+```html
+<body>
+    <!-- banner -->
+    <iframe src="iframe/banner.html" frameborder="0" scrolling="no" width="100%"></iframe>
+    <!-- nav(導覽列) -->
+    <iframe src="iframe/nav.html" frameborder="0" scrolling="auto" width="20%" height="300px"></iframe>
+    <!-- content(核心內容區) -->
+    <iframe src="iframe/content1.html" name="main" frameborder="0" scrolling="no" width="70%" height="300px"></iframe>
+</body>
+```
+
+**注意:**
+在實際開發中，盡量減少使用iframe，因為他破壞了前進和後退功能，且不利於SEO。
